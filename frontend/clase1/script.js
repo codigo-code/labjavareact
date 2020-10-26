@@ -8,7 +8,7 @@ const tmp = document.createElement('template');
 tmp.innerHTML = `
     <div>
         <input type="text" placeholder="ingrese texto" /> <br />
-        <label miPropiedad="" />
+        <label miPropiedad=""  />
     </div>    
 `;
 
@@ -18,6 +18,7 @@ class MiElemento extends HTMLElement {
 
     constructor() {
         super();
+        console.log('Constructor');
 
         this._shadowRoot = this.attachShadow({ 'mode': 'open' });
         this._shadowRoot.appendChild(tmp.content.cloneNode(true));
@@ -28,6 +29,24 @@ class MiElemento extends HTMLElement {
         })
 
     }
+
+    static get observedAttributes(){
+        return ["demo"];
+    }
+
+    connectedCallback() {
+        console.log("conected");
+    }
+
+    disconnectedCallback() {
+        console.log("disconected");
+    }
+
+    attributeChangedCallback(name, oldValue, newValue) {
+        console.log('cambios', name, oldValue, newValue)
+    }
+
+    
 }
 
 // para crear el elemento y mostrarlo en la pagina html
