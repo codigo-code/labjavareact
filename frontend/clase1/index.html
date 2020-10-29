@@ -5,10 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="script.js" > </script>
+    <script src="multiples.js" > </script>
+    <script src="anchoros.js" > </script>
+    <script src="renderos.js" > </script>
+    <script src="menu.js" > </script>
+    
+
+
+
 </head>
 <body>
- 
-    <neo-input></neo-input>
+ <script>
+    let $element = document.createElement('neo-input')
+    setTimeout(()=>{
+        document.body.appendChild($element);
+    },3000);
+ </script>
+
+    <neo-multi></neo-multi>
+    <neo-divi></neo-divi>
+    <!--neo-input></neo-input-->
+
+<br/>
+<a is="custom-anchoros" href="http://www.google.com" >ir a google </a>
+<br/>
+
+<neoris-render interval="1000"></neoris-render>
+asd
+
+<br/>
+
+<neo-menu></neo-menu>
+
+
 
 </body>
 </html>
