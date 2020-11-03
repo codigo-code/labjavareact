@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+    
+</head>
+<body>
+    <neo-cliclo dolar=""></neo-cliclo>
+    
+    <button onclick="funcionLoca()">infalte! </button>
+    <script>
+       async function  funcionLoca(){
+
+           let obj = null;
+           // invocamos a un API de internet ( podria ser local ... http://localhost:8080/api )
+           await fetch('https://swapi.dev/api/people/1/')
+           .then(resp => resp.json())
+           .then(resp =>{
+               obj = resp;
+            } )
+
+            //let obj = [{
+            //    id:1,
+            //    nombre:'pepito',
+            //    apellido:'fulano'
+            //}];
+            document.querySelector("neo-cliclo").setAttribute("dolar",JSON.stringify(obj));
+        }
+
+    </script>
+</body>
+</html>
