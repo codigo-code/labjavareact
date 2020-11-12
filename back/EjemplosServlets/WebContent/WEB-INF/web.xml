@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>EjemplosServlets</display-name>
+  <servlet>
+    <servlet-name>servletUno</servlet-name>
+    <servlet-class>com.lab.servlets.ServletUno</servlet-class>
+    <init-param>
+      <param-name>email1</param-name>
+      <param-value>ctirimacco@gmail.com</param-value>
+    </init-param>
+    <init-param>
+      <param-name>email2</param-name>
+      <param-value>cristian.tirimacco@neoris.com</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>servletUno</servlet-name>
+    <url-pattern>/uno</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+</web-app>
