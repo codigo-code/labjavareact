@@ -11,7 +11,7 @@
 
     <h3>Lista de Productos</h3>
  
-    <p style="color: red;"></p>
+    <p style="color: red;">${errorMensaje}</p>
  
     <table border="1" cellpadding="5" cellspacing="1" >
        <tr>
@@ -22,14 +22,14 @@
           <th>Editar</th>
           <th>Eliminar</th>
        </tr>
-       <c:forEach items="" var="" >
+       <c:forEach items="${listaProductos}" var="producto" >
           <tr>
-             <td></td>
-             <td></td>
-             <td></td>
-             <td></td>
+             <td>${producto.codigo}</td>
+             <td>${producto.nombre}</td>
+             <td>${producto.precio}</td>
+             <td>${producto.cantidad}</td>
              <td>
-                <a href="">Editar</a>
+                <a href="editarProducto?codigo=${producto.codigo}">Editar</a>
              </td>
              <td>
                 <a href="">Eliminar</a>
@@ -38,7 +38,7 @@
        </c:forEach>
     </table>
     
-    <a href="">Crear Producto</a>
+    <a href="crearProducto">Crear Producto</a>
 
 </body>
 </html>
